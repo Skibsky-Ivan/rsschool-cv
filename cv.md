@@ -1,23 +1,35 @@
-Skibsky Ivan
+# Skibsky Ivan
 
-telephone: +375(29)533-43-84
-mail: skibsky.ivan@yandex.ru
-discord: Ivan(@Skibsky-Ivan)
+## Contact Information
 
-Right now I have one goal: to become a sought-after specialist in the field of the web 
-Well, I'm going to look for a job next year. 
-Characteristics: persistent, inquisitive. 
-Hachu studies hard and acquires new skills.
+- **Phone:** +375(29)533-43-84  
+- **Email:** skibsky.ivan@yandex.ru  
+- **Discord:** Ivan (@Skibsky-Ivan)
 
-HTML, CSS, JS, git, VS Code
+## Brief Self-Introduction
 
-Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
+My main goal right now is to become an in-demand specialist in web development. I plan to actively look for a job next year.
 
-```js
+My key qualities: persistence, curiosity, and the ability to independently figure out complex topics.
+
+I am ready to study hard and constantly acquire new skills to benefit the team and grow as a professional.
+
+## Skills
+
+- HTML, CSS  
+- JavaScript  
+- Git  
+- VS Code  
+
+## Code Example (Codewars)
+
+**Task:** Determine if a 9×9 Sudoku board is valid (no repetitions in rows, columns, and 3×3 sub-boxes).
+
+```javascript
 /**
-* @param {character[][]} board
-* @return {boolean}
-*/
+ * @param {character[][]} board
+ * @return {boolean}
+ */
 function checkLine(board, isRow) {
     for (let i = 0; i < 9; i++) {
         let seen = [];
@@ -56,8 +68,17 @@ var isValidSudoku = function (board) {
 }
 ```
 
-https://github.com/Skibsky-Ivan/rsschool-cv/tree/gh-pages
+## Work Experience  
+  
+[CV in Markdown](https://github.com/Skibsky-Ivan/rsschool-cv/tree/gh-pages)
 
-education: BSU, Faculty of Mechanics and Mathematics, specialty mathematics
+## Education
 
-English: A1. help me with making a CV in markdown (requirements and recommendations in the picture)
+- **BSU (Belarusian State University)**  
+Faculty of Mechanics and Mathematics  
+Major: Mathematics
+
+## English Language
+
+- **Level**: A1 (Beginner).  
+I am currently actively learning English to read technical documentation and communicate in a professional environment.
