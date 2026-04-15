@@ -1,5 +1,7 @@
 # Skibsky Ivan
 
+![](my_photo.jpg)
+
 ## Contact Information
 
 - **Phone:** +375(29)533-43-84  
