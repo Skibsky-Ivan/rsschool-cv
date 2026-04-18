@@ -3,45 +3,152 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Skibsky Ivan</title>
   </head>
   <body>
     <main>
-      <nav></nav>
+      <nav>
+        <ul>
+          <li><a href="#about-me">About me</a></li>
+          <li><a href="#education-languages">Education/Languages</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#code-examples">Code Examples</a></li>
+        </ul>
+      </nav>
       <header>
         <h1>Skibsky Ivan</h1>
         <img src="my_photo.jpg" />
-        <p></p>
+        <div>
+          <h2 id="about-me">About me</h2>
+          <p>
+            I am learning web development from scratch. I enjoy creating
+            websites and solving problems that make me think. I am persistent,
+            curious, and able to independently figure out complex topics. I
+            understand that the path in IT is not easy, but I am ready to study
+            hard and constantly acquire new skills to grow as a specialist.
+          </p>
+        </div>
       </header>
-      <div class="contacts">
-        <ol>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ol>
-      </div>
       <section class="general-info">
-        <div class="info education">
-          <h3>Education</h3>
-          <div></div>
+        <div id="contacts" class="info">
+          <ul>
+            <li>
+              <img
+                class="contact-icon" src="./images/contact-icons/email-icon.svg"
+                alt="email-icon" aria-hidden="true" />
+              <a href="mailto:skibsky.ivan@yandex.ru" target="_blank">
+                skibsky.ivan@yandex.ru</a>
+            </li>
+            <li>
+              <img 
+                class="contact-icon" src="./images/contact-icons/discord-icon.svg"
+                alt="discord-icon" aria-hidden="true" />
+              <a href="https://discord.com/users/__kisel___93562" target="_blank">
+                @__kisel___93562</a>
+            </li>
+            <li>
+              <img
+                class="contact-icon" src="./images/contact-icons/telegram-icon.svg"
+                alt="telegram-icon" aria-hidden="true" />
+              <a href="https://t.me/skipskiy" target="_blank">@skipskiy</a>
+            </li>
+            <li>
+              <img
+                class="contact-icon" src="./images/contact-icons/githab-icon.svg"
+                alt="telegram-icon" aria-hidden="true" />
+              <a href="https://github.com/Skibsky-Ivan" target="_blank">
+                @Skibsky-Ivan</a>
+            </li>
+          </ul>
         </div>
-        <div class="info language">
-          <h3>Language</h3>
-          <div></div>
+        <div id="education-languages" class="info">
+          <h3>Education and language</h3>
+          <ul>
+            <li>
+              BSU (Belarusian State University) Faculty of Mechanics and
+              Mathematics Major: Mathematics
+            </li>
+            <li>Russian: Native speaker</li>
+            <li>English: A0(Beginner)</li>
+          </ul>
         </div>
-        <div class="info skills">
+        <div id="skills" class="info">
           <h3>Skills</h3>
-          <div></div>
+          <ul>
+            <li>HTML / CSS</li>
+            <li>JavaScript</li>
+            <li>git / Github</li>
+          </ul>
         </div>
       </section>
-      <section class="progects">
-        <h2>Progects</h2>
-        <div></div>
+      <section id="projects">
+        <h2>My projects</h2>
+        <a
+          href="https://github.com/Skibsky-Ivan/rsschool-cv/tree/rsschool-cv-html">
+          CV. Markdown & Git / HTML, CSS & Git</a>
+        <p>
+          The first completed educational project within the JS/FE Preschool
+          course.
+        </p>
+        <ul>
+          <li>
+            <span class="accent-style">Core:</span>
+            Developed a structured CV using Markdown syntax / Developed a
+            structured CV using HTML & CSS.
+          </li>
+          <li>
+            <span class="accent-style">Tech Stack:</span>
+            Git, GitHub, Markdown, HTML, CSS.
+          </li>
+        </ul>
       </section>
-      <section class="code-examples">
+      <section id="code-examples">
         <h2>Code Examples</h2>
-        <div></div>
+        <p>
+          <span>Task:</span> Determine if a 9*9 Sudoku board is valid (no
+          repetitions in rows, columns, and 3*3 sub-boxes).
+        </p>
+        <pre>
+          <code>
+            function checkLine(board, isRow) {
+              for (let i = 0; i < 9; i++) {
+                let seen = [];
+                for (let j = 0; j < 9; j++) {
+                  let cell = isRow ? board[i][j] : board[j][i];
+                  if (cell === '.') continue;
+                  if (seen.includes(cell)) return false;
+                  seen.push(cell);
+                }
+              }
+              return true;
+            }
+
+            function checkSquare(board, n, m) {
+              let seen = [];
+              for (let i = 3 * n; i < 3 * (n + 1); ++i) {
+                for (let j = 3 * m; j < 3 * (m + 1); ++j) {
+                  if (board[i][j] === '.') continue;
+                  if (seen.includes(board[i][j])) return false;
+                  seen.push(board[i][j]);
+                }
+              }
+              return true;
+            }
+
+            var isValidSudoku = function (board) {
+              if (!checkLine(board, true)) return false;
+              if (!checkLine(board, false)) return false;
+
+              for (let n = 0; n < 3; ++n) {
+                for (let m = 0; m < 3; ++m) {
+                  if (!checkSquare(board, n, m)) return false;
+                }
+              }
+              return true;
+            }
+          </code>      
+        </pre>
       </section>
     </main>
   </body>
