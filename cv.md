@@ -10,7 +10,7 @@
 
 ## Brief Self-Introduction
 
-My main goal right now is to become an in-demand specialist in web development. I plan to actively look for a job next year.
+My main goal right now is  to become an in-demand specialist in web development. I plan to actively look for a job next year.
 
 My key qualities: persistence, curiosity, and the ability to independently figure out complex topics.
 
