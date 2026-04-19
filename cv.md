@@ -1,86 +1,56 @@
 # Skibsky Ivan
 
-![](my_photo.jpg)
+<img src="images/my_photo.jpg" alt="Ivan Skibsky photo" width="200">
+
+## About me
+
+I am learning web development from scratch. I enjoy creating websites and solving problems that make me think. I am persistent, curious, and able to independently figure out complex topics. I understand that the path in IT is not easy, but I am ready to study hard and constantly acquire new skills to grow as a specialist.
 
 ## Contact Information
 
-- **Phone:** +375(29)533-43-84  
-- **Email:** skibsky.ivan@yandex.ru  
-- **Discord:** Ivan (@Skibsky-Ivan)
+- **Email:** skibsky.ivan@yandex.ru
+- **Discord:** @__kisel___93562
+- **Telegram:** @skipskiy
+- **GitHub:** @Skibsky-Ivan
 
-## Brief Self-Introduction
+## Education / Languages
 
-My main goal right now is  to become an in-demand specialist in web development. I plan to actively look for a job next year.
-
-My key qualities: persistence, curiosity, and the ability to independently figure out complex topics.
-
-I am ready to study hard and constantly acquire new skills to benefit the team and grow as a professional.
+- **BSU** (Belarusian State University) — Faculty of Mechanics and Mathematics, Major: Mathematics
+- **Russian:** Native speaker
+- **English:** A1 (Beginner)
 
 ## Skills
 
-- HTML, CSS  
-- JavaScript  
-- Git  
-- VS Code  
+- HTML / CSS
+- JavaScript
+- Git / GitHub
 
-## Code Example (Codewars)
+## Projects
 
-**Task:** Determine if a 9×9 Sudoku board is valid (no repetitions in rows, columns, and 3×3 sub-boxes).
+#### [CV. Markdown & Git / HTML, CSS & Git](https://github.com/Skibsky-Ivan/rsschool-cv/tree/rsschool-cv-html)
+
+The first completed educational project within the JS/FE Preschool course.
+
+- **Core:** Developed a structured CV using Markdown syntax / Developed a structured CV using HTML & CSS.
+- **Tech Stack:** Git, GitHub, Markdown, HTML, CSS.
+
+## Code Example
+
+**Task:** You are climbing a staircase. It takes n steps to reach the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
 
 ```javascript
-/**
- * @param {character[][]} board
- * @return {boolean}
- */
-function checkLine(board, isRow) {
-    for (let i = 0; i < 9; i++) {
-        let seen = [];
-        for (let j = 0; j < 9; j++) {
-            let cell = isRow ? board[i][j] : board[j][i];
-            if (cell === '.') continue;
-            if (seen.includes(cell)) return false;
-            seen.push(cell);
-        }
+var climbStairs = function(n) {
+    if (n < 3) return n;
+    
+    let prev1 = 1;
+    let prev2 = 2;
+    
+    for (let i = 3; i <= n; ++i) {
+        let curr = prev1 + prev2;
+        prev1 = prev2;
+        prev2 = curr;
     }
-    return true;
-}
-
-function checkSquare(board, n, m) {
-    let seen = [];
-    for (let i = 3 * n; i < 3 * (n + 1); ++i) {
-        for (let j = 3 * m; j < 3 * (m + 1); ++j) {
-            if (board[i][j] === '.') continue;
-            if (seen.includes(board[i][j])) return false;
-            seen.push(board[i][j]);
-        }
-    }
-    return true;
-}
-
-var isValidSudoku = function (board) {
-    if (!checkLine(board, true)) return false;
-    if (!checkLine(board, false)) return false;
-
-    for (let n = 0; n < 3; ++n) {
-        for (let m = 0; m < 3; ++m) {
-            if (!checkSquare(board, n, m)) return false;
-        }
-    }
-    return true;
-}
+    
+    return prev2;
+};
 ```
-
-## Work Experience  
-  
-[CV in Markdown](https://github.com/Skibsky-Ivan/rsschool-cv/tree/gh-pages)
-
-## Education
-
-- **BSU (Belarusian State University)**  
-Faculty of Mechanics and Mathematics  
-Major: Mathematics
-
-## English Language
-
-- **Level**: A1 (Beginner).  
-I am currently actively learning English to read technical documentation and communicate in a professional environment.
