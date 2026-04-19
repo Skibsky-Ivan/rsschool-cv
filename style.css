@@ -7,7 +7,7 @@
   --color-orange: rgb(193, 131, 55);
   --color-green-info: rgb(7, 63, 70);
   --color-yellow-card: rgba(210, 221, 62, 0.9);
-  --color-green-h2: rgb(31, 50, 53);
+  --color-green-dark: rgb(31, 50, 53);
   --color-yellow-hover: rgb(255, 245, 58);
   --color-green-code: rgb(56, 143, 82);
   --color-blue-body: rgb(2, 10, 48);
@@ -29,9 +29,9 @@ body {
 
 h2 {
   font-size: 2.5rem;
-  color: var(--color-green-h2);
+  color: var(--color-green-dark);
   margin-bottom: 15px;
-  border-bottom: 3px solid var(--color-green-h2);
+  border-bottom: 3px solid var(--color-green-dark);
 }
 
 /* ========== НАВИГАЦИЯ ========== */
@@ -114,9 +114,9 @@ header p {
 }
 
 .general-info h3 {
-  color: var(--color-teal-dark);
+  color: var(--color-green-dark);
   font-size: 1.5rem;
-  border-bottom: 3px solid var(--color-teal-dark);
+  border-bottom: 2px solid var(--color-green-dark);
   display: inline-block;
 }
 
@@ -126,14 +126,13 @@ header p {
 }
 
 .general-info ul li {
-  margin: 12px 0;
+  margin-bottom: 12px;
   padding-left: 20px;
   position: relative;
 }
 
 .general-info ul li::before {
   content: "•";
-  color: var(--color-teal-text); 
   position: absolute;
   left: 0;
   font-size: 1.2rem;
@@ -178,20 +177,15 @@ header p {
   border-bottom: 13px dashed var(--color-green-code);
 }
 
-.projects > a {
-  display: inline-block;
+.projects > a, .projects > a:visited {
   color: var(--color-light); 
   font-weight: bold;
-  margin: 10px 0;
+  margin-bottom: 10px;
   font-size: 1.6rem;
 }
 
 .projects > a:hover {
   color: var(--color-yellow-hover);
-}
-
-.projects > h2 {
-  padding: 0;
 }
 
 .projects p {
@@ -204,7 +198,7 @@ header p {
 }
 
 .projects ul li {
-  margin: 8px 0;
+  margin-bottom: 8px;
 }
 
 .projects ul li::marker {
@@ -223,7 +217,7 @@ header p {
 }
 
 pre {
-  background: var(--color-green-h2); 
+  background: var(--color-green-dark); 
   color: var(--color-light);
   padding: 0 40px;
   overflow-x: auto;
