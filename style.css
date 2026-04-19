@@ -1,0 +1,250 @@
+:root {
+  --color-blue-light: rgb(38, 53, 127);
+  --color-purple-dark: rgb(47, 38, 82);
+  --color-light: rgb(188, 221, 250);
+  --color-green-main: rgb(11, 98, 82);
+  --color-blue-nav: rgb(1, 36, 70);
+  --color-orange: rgb(193, 131, 55);
+  --color-green-info: rgb(7, 63, 70);
+  --color-yellow-card: rgba(210, 221, 62, 0.9);
+  --color-green-dark: rgb(31, 50, 53);
+  --color-yellow-hover: rgb(255, 245, 58);
+  --color-green-code: rgb(56, 143, 82);
+  --color-blue-body: rgb(2, 10, 48);
+}
+
+/* ========== BASIC ========== */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-blue-body); 
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--color-light);
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: var(--color-green-dark);
+  margin-bottom: 15px;
+  border-bottom: 3px solid var(--color-green-dark);
+}
+
+/* ========== NAVIGATION ========== */
+nav {
+  background-color: var(--color-blue-nav);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav > ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 30px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+nav a, 
+nav a:visited {
+  display: inline-flex;
+  padding: 20px 50px;
+  color: var(--color-light); 
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--color-orange);
+}
+
+/* ========== MAIN ========== */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--color-green-main);
+}
+
+/* ========== HEADER ========== */
+header {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  padding: 55px;
+  border-bottom: 13px dashed var(--color-green-info);
+}
+
+[src*="my_photo.jpg"] {
+  width: 200px;
+  box-shadow: 20px 20px 0 var(--color-blue-light),
+    -20px -20px 0 var(--color-purple-dark);
+}
+
+header h1 {
+  color: var(--color-blue-nav); 
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+}
+
+header p {
+  line-height: 1.6;
+}
+
+/* ========== GENERAL INFO ========== */
+.general-info {
+  color: var(--color-blue-nav); 
+  background-color: var(--color-green-info);
+  display: flex;
+  gap: 25px;
+  padding: 40px;
+  box-shadow: 0 15px 20px var(--color-blue-nav);
+}
+
+.general-info .info {
+  flex: 1;
+  background: var(--color-yellow-card);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.general-info h3 {
+  color: var(--color-green-dark);
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--color-green-dark);
+  display: inline-block;
+}
+
+.general-info ul {
+  list-style: none;
+  margin-top: 25px;
+}
+
+.general-info ul li {
+  margin-bottom: 12px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.general-info ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+.general-info span {
+  font-weight: bold;
+}
+
+/* CONTACTS */
+.contact-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.contacts ul li {
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+}
+
+.contacts ul li::before {
+  display: none;
+}
+
+.contacts a, 
+.contacts a:visited {
+  text-decoration: none;
+  transition: color 0.2s;
+  color: var(--color-blue-nav); 
+}
+
+.contacts a:hover {
+  color: var(--color-light);
+}
+
+/* ========== PROJECTS ========== */
+.projects {
+  padding: 55px;
+  border-bottom: 13px dashed var(--color-green-code);
+}
+
+.projects > a, .projects > a:visited {
+  color: var(--color-light); 
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+}
+
+.projects > a:hover {
+  color: var(--color-yellow-hover);
+}
+
+.projects p {
+  color: var(--color-blue-nav);
+  font-style: italic;
+}
+
+.projects ul {
+  margin: 25px 0 0 25px;
+}
+
+.projects ul li {
+  margin-bottom: 8px;
+}
+
+.projects ul li::marker {
+  color: var(--color-blue-nav); 
+}
+
+.accent-style {
+  font-weight: bold;
+  color: var(--color-blue-nav); 
+}
+
+/* ========== CODE EXAMPLES ========== */
+.code-examples {
+  background-color: var(--color-green-code);
+  padding: 55px;
+}
+
+pre {
+  background: var(--color-green-dark); 
+  color: var(--color-light);
+  padding: 0 40px;
+  overflow-x: auto;
+  margin-top: 25px;
+}
+
+/* ========  FOOTER ========= */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer div {
+  display: flex;
+  margin: 10px 55px;
+  gap: 20px;
+}
+
+footer img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: block;
+  filter: grayscale(0.5);
+}
+
+footer span {
+  margin: 0 55px;
+}
