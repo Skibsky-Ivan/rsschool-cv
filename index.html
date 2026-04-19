@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skibsky Ivan</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#about-me">ABOUT ME</a></li>
+        <li><a href="#education-languages">EDUCATION / LANGUAGES</a></li>
+        <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="#code-examples">CODE EXAMPLES</a></li>
+      </ul>
+    </nav>
+    <main>
+      <header>
+        <img src="images/my_photo.jpg" alt="Ivan Skibsky photo" />
+        <div>
+          <h1>Skibsky Ivan</h1>
+          <div id="about-me">
+            <h2>About me</h2>
+            <p>
+              I am learning web development from scratch. I enjoy creating
+              websites and solving problems that make me think. I am persistent,
+              curious, and able to independently figure out complex topics. I
+              understand that the path in IT is not easy, but I am ready to
+              study hard and constantly acquire new skills to grow as a
+              specialist.
+            </p>
+          </div>
+        </div>
+      </header>
+      <section class="general-info">
+        <div id="contacts" class="contacts info">
+          <h3>CONTACTS</h3>
+          <ul>
+            <li>
+              <img
+                class="contact-icon"
+                src="./images/icons/email-icon.png"
+                alt="email-icon"
+                aria-hidden="true" />
+              <a href="mailto:skibsky.ivan@yandex.ru" target="_blank">
+                skibsky.ivan@yandex.ru</a
+              >
+            </li>
+            <li>
+              <img
+                class="contact-icon"
+                src="./images/icons/discord-icon.png"
+                alt="discord-icon"
+                aria-hidden="true" />
+              <a
+                href="https://discord.com/users/__kisel___93562"
+                target="_blank">
+                @__kisel___93562</a
+              >
+            </li>
+            <li>
+              <img
+                class="contact-icon"
+                src="./images/icons/telegram-icon.png"
+                alt="telegram-icon"
+                aria-hidden="true" />
+              <a href="https://t.me/skipskiy" target="_blank">@skipskiy</a>
+            </li>
+            <li>
+              <img
+                class="contact-icon"
+                src="./images/icons/github-icon.png"
+                alt="telegram-icon"
+                aria-hidden="true" />
+              <a href="https://github.com/Skibsky-Ivan" target="_blank">
+                @Skibsky-Ivan</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div id="education-languages" class="info">
+          <h3>EDUCATION / LANGUAGES</h3>
+          <ul>
+            <li>
+              <span>BSU</span> (Belarusian State University) Faculty of
+              Mechanics and Mathematics Major: Mathematics
+            </li>
+            <li><span>Russian:</span> Native speaker</li>
+            <li><span>English:</span> A1(Beginner)</li>
+          </ul>
+        </div>
+        <div id="skills" class="info">
+          <h3>SKILLS</h3>
+          <ul>
+            <li>HTML / CSS</li>
+            <li>JavaScript</li>
+            <li>git / Github</li>
+          </ul>
+        </div>
+      </section>
+      <section id="projects" class="projects">
+        <h2>MY PROJECTS</h2>
+        <a
+          href="https://github.com/Skibsky-Ivan/rsschool-cv/tree/rsschool-cv-html">
+          CV. MARKDOWN & GIT / HTML, CSS & GIT</a
+        >
+        <p>
+          The first completed educational project within the JS/FE Preschool
+          course.
+        </p>
+        <ul>
+          <li>
+            <span class="accent-style">Core:</span>
+            Developed a structured CV using Markdown syntax / Developed a
+            structured CV using HTML & CSS.
+          </li>
+          <li>
+            <span class="accent-style">Tech Stack:</span>
+            Git, GitHub, Markdown, HTML, CSS.
+          </li>
+        </ul>
+      </section>
+      <section id="code-examples" class="code-examples">
+        <h2>CODE EXAMPLES</h2>
+        <p>
+          <span class="accent-style">Task:</span> You are climbing a staircase.
+          It takes n steps to reach the top. Each time you can either climb 1 or
+          2 steps. In how many distinct ways can you climb to the top?
+        </p>
+        <pre>
+            <code>
+var climbStairs = function(n) {
+    if (n < 3) return n;
+    
+    let prev1 = 1;
+    let prev2 = 2;
+    
+    for (let i = 3; i <= n; ++i) {
+        let curr = prev1 + prev2;
+        prev1 = prev2;
+        prev2 = curr;
+    }
+    
+    return prev2;
+};              
+            </code>      
+          </pre>
+      </section>
+      <footer>
+        <div>
+          <a href="https://rs.school/courses/javascript">
+            <img src="images/rs_school.jpg" alt="rs.school" />
+          </a>
+          <a href="https://github.com/Skibsky-Ivan">
+            <img src="images/my_github.jpg" alt="Skibsky-Ivan.GitHub" />
+          </a>
+        </div>
+        <span>19.04.2026</span>
+      </footer>
+    </main>
+  </body>
+</html>
