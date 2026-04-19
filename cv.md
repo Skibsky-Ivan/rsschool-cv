@@ -1,6 +1,6 @@
 # Skibsky Ivan
 
-![](images/my_photo.jpg)
+<img src="images/my_photo.jpg" alt="Ivan Skibsky photo" width="200">
 
 ## About me
 
