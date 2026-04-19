@@ -13,7 +13,7 @@
   --color-blue-body: rgb(2, 10, 48);
 }
 
-/* ========== БАЗОВЫЕ СТИЛИ ========== */
+/* ========== BASIC ========== */
 * {
   margin: 0;
   padding: 0;
@@ -34,7 +34,7 @@ h2 {
   border-bottom: 3px solid var(--color-green-dark);
 }
 
-/* ========== НАВИГАЦИЯ ========== */
+/* ========== NAVIGATION ========== */
 nav {
   background-color: var(--color-blue-nav);
   position: sticky;
@@ -64,7 +64,7 @@ nav a:hover {
   color: var(--color-orange);
 }
 
-/* ========== ОСНОВНОЙ КОНТЕЙНЕР ========== */
+/* ========== MAIN ========== */
 main {
   max-width: 1200px;
   margin: 0 auto;
@@ -96,7 +96,7 @@ header p {
   line-height: 1.6;
 }
 
-/* ========== СЕКЦИЯ generalInfo ========== */
+/* ========== GENERAL INFO ========== */
 .general-info {
   color: var(--color-blue-nav); 
   background-color: var(--color-green-info);
@@ -142,7 +142,7 @@ header p {
   font-weight: bold;
 }
 
-/* Контакты */
+/* CONTACTS */
 .contact-icon {
   width: 20px;
   height: 20px;
@@ -171,7 +171,7 @@ header p {
   color: var(--color-light);
 }
 
-/* ========== ПРОЕКТЫ ========== */
+/* ========== PROJECTS ========== */
 .projects {
   padding: 55px;
   border-bottom: 13px dashed var(--color-green-code);
@@ -210,7 +210,7 @@ header p {
   color: var(--color-blue-nav); 
 }
 
-/* ========== ПРИМЕР КОДА ========== */
+/* ========== CODE EXAMPLES ========== */
 .code-examples {
   background-color: var(--color-green-code);
   padding: 55px;
@@ -222,4 +222,29 @@ pre {
   padding: 0 40px;
   overflow-x: auto;
   margin-top: 25px;
+}
+
+/* ========  FOOTER ========= */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer div {
+  display: flex;
+  margin: 10px 55px;
+  gap: 20px;
+}
+
+footer img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: block;
+  filter: grayscale(0.5);
+}
+
+footer span {
+  margin: 0 55px;
 }
