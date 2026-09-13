@@ -25,3 +25,16 @@ I am currently learning Node.js to develop further as a full-stack developer. I 
 - **Telegram:** [@skipskiy](https://t.me/skipskiy)
 - **Discord:** `@__kisel___93562`
 - **GitHub:** [github.com/Skibsky-Ivan](https://github.com/Skibsky-Ivan)
+
+---
+
+## Skills
+
+- JavaScript, TypeScript
+- HTML5, CSS3, responsive / adaptive layout
+- SPA basics: client-side routing, state management
+- Node.js basics — currently learning
+- Git, GitHub, GitHub Pages
+- Vite, npm
+
+**Tools:** VS Code, Chrome DevTools, Figma
