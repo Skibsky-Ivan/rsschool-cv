@@ -116,3 +116,44 @@ A set of interactive widgets built with Vanilla JavaScript.
 - Added filter presets and a reset-all control.
 
 **Tech Stack:** JavaScript, HTML, CSS, Canvas, Browser APIs, localStorage
+
+---
+
+## Code Example
+
+**Task:** You are climbing a staircase. It takes `n` steps to reach the top. Each time you can either climb `1` or `2` steps. In how many distinct ways can you climb to the top?
+
+```javascript
+var climbStairs = function(n) {
+    if (n < 3) return n;
+
+    let prev1 = 1;
+    let prev2 = 2;
+
+    for (let i = 3; i &lt;= n; i++) {
+        const current = prev1 + prev2;
+        prev1 = prev2;
+        prev2 = current;
+    }
+
+    return prev2;
+};
+```
+
+---
+
+## Education
+
+- **Belarusian State University**, Faculty of Mechanics and Mathematics  
+  Major: Mathematics
+
+- **RS School JS/FE Course**  
+  Completed Stage 0 and Stage 0.5  
+  Currently taking Stage 1
+
+---
+
+## Languages
+
+- **Russian:** Native speaker
+- **English:** A1, currently improving
