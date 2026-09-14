@@ -1,0 +1,49 @@
+$icons: (
+  'code': 'code',
+  'database': 'database',
+  'discord': 'discord',
+  'git-folder': 'folder-git-2',
+  'education': 'graduation-cap',
+  'mail': 'mail-filled',
+  'rocket': 'rocket',
+  'skills': 'skills',
+  'telegram': 'telegram',
+  'terminal': 'terminal-square',
+  'github': 'github',
+  'book': 'book-open',
+  'languages': 'languages',
+  'sun': 'sun',
+  'moon': 'moon',
+);
+
+.icon {
+  --icon-size: 1.25rem;
+
+  display: inline-block;
+  flex: 0 0 auto;
+  width: var(--icon-size);
+  height: var(--icon-size);
+
+  background-color: currentColor;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+.icon--small {
+  --icon-size: 1rem;
+}
+
+.icon--large {
+  --icon-size: 1.5rem;
+}
+
+@each $class, $file in $icons {
+  .icon--#{$class} {
+    -webkit-mask-image: url('images/icons/#{$file}.svg');
+    mask-image: url('images/icons/#{$file}.svg');
+  }
+}
