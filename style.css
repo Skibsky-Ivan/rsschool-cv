@@ -330,6 +330,19 @@ h3 {
   background: transparent;
 }
 
+.nav-wrapper {
+  border-bottom: 1px solid transparent;
+  backdrop-filter: blur(0);
+  transition: background var(--transition-medium), border-color var(--transition-medium), backdrop-filter var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+.nav-wrapper.is-scrolled {
+  border-bottom-color: var(--line);
+  background: var(--nav-bg);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(1.125rem);
+}
+
 .nav {
   display: flex;
   align-items: center;
