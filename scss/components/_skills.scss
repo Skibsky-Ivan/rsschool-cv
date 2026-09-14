@@ -1,0 +1,54 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+@use '../base/placeholders' as *;
+
+.skills-layout {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.125rem;
+}
+
+.skill-panel {
+  @extend %card;
+
+  padding: 1.625rem;
+  transition:
+    border-color var(--transition-fast),
+    background var(--transition-fast);
+
+  &:hover {
+    border-color: var(--green);
+    background: var(--surface-hover);
+  }
+}
+
+.skill-panel__title {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-bottom: 1.25rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+
+  .icon {
+    color: var(--green);
+  }
+}
+
+.pill-list {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+
+  li {
+    @extend %tag;
+  }
+}
+
+@include tablet {
+  .skills-layout {
+    grid-template-columns: 1fr;
+  }
+}

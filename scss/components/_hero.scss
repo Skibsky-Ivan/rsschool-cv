@@ -1,0 +1,122 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+@use '../base/placeholders' as *;
+
+$hero-stack: 56.25rem;
+
+.hero-grid {
+  padding: 3rem 0 5.5rem;
+  background-color: var(--bg-soft);
+  border-bottom: 1px solid var(--line);
+
+  overflow-x: clip;
+}
+
+.hero-grid > .container {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(14rem, 0.75fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.eyebrow {
+  @extend %kicker;
+
+  margin-bottom: 1rem;
+}
+
+.hero-role {
+  margin-bottom: 1.25rem;
+  color: var(--blue);
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.875rem;
+  margin-top: 1.75rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.875rem;
+  padding: 0.75rem 1.125rem;
+  border-radius: 999px;
+  font-weight: 900;
+  transition: transform var(--transition-fast);
+
+  &:hover {
+    transform: translateY(-0.125rem);
+  }
+}
+
+.button-primary {
+  background: var(--green);
+  color: var(--text);
+
+  &:hover {
+    color: var(--text-active);
+  }
+}
+
+.button-secondary {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+
+  &:hover {
+    border-color: var(--green);
+    color: var(--green);
+  }
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 22rem;
+  margin-inline: auto;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 5px solid var(--bg);
+  border-radius: var(--radius-lg);
+  box-shadow: 0.625rem 0.625rem 0 var(--hero-photo-shadow);
+  transform: rotate(5deg);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: $hero-stack) {
+  .hero-grid > .container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .profile-card {
+    max-width: 18rem;
+  }
+}
+
+@include mobile {
+  .hero-grid {
+    padding: 2.5rem 0 4.5rem;
+  }
+
+  .profile-card {
+    max-width: 14rem;
+  }
+}
+
+@include small-mobile {
+  .hero-actions,
+  .button {
+    width: 100%;
+  }
+}
