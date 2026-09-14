@@ -54,3 +54,44 @@
   --transition-fast: 180ms ease;
   --transition-medium: 280ms ease;
 }
+
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  --bg: #f6ecd8;
+  --bg-soft: #efe0c3;
+
+  --panel: #fff9ec;
+  --panel-strong: #f7ecd7;
+
+  --text: #102f4e;
+  --text-active: #e6ddc4;
+  --muted: #617083;
+
+  --line: rgba(16, 47, 78, 0.16);
+
+  --green: #35a882;
+  --blue: #4f7099;
+  --pink: #d86f89;
+  --yellow: #e7ad39;
+  --purple: #7e6aa8;
+
+  --nav-bg: rgba(255, 249, 236, 0.88);
+
+  --surface: rgba(255, 255, 255, 0.48);
+  --surface-hover: rgba(255, 255, 255, 0.62);
+  --surface-soft: rgba(255, 255, 255, 0.38);
+
+  --glow-primary: rgba(231, 173, 57, 0.22);
+  --glow-secondary: rgba(79, 112, 153, 0.18);
+  --grid-line: rgba(16, 47, 78, 0.08);
+
+  --hero-photo-shadow: #504bdb;
+
+  --code-bg: #f3e9d4;
+  --code-bar-bg: #efe0c3;
+  --code-text: #102f4e;
+
+  --shadow: 0 1.5rem 5rem rgba(16, 47, 78, 0.18);
+  --shadow-soft: 0 1.125rem 3.75rem rgba(16, 47, 78, 0.14);
+}

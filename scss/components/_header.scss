@@ -15,8 +15,6 @@
   left: 0;
   z-index: 100;
   background: transparent;
-}
-.nav-wrapper {
   border-bottom: 1px solid transparent;
   backdrop-filter: blur(0);
 
@@ -33,7 +31,6 @@
   box-shadow: var(--shadow-soft);
   backdrop-filter: blur(1.125rem);
 }
-
 
 .nav {
   display: flex;
@@ -55,11 +52,132 @@
   color: var(--text);
 }
 
+.logo-mark {
+  display: grid;
+  width: 2.375rem;
+  height: 2.375rem;
+  place-items: center;
+  border-radius: 0.75rem;
+  background: var(--yellow);
+  box-shadow: var(--shadow-sticker);
+  color: #151000;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  transform: rotate(-5deg);
+}
+
 .nav-actions {
   display: flex;
   flex: 0 0 auto;
   align-items: center;
   gap: 0.625rem;
+}
+
+.nav-links {
+  @include list-reset;
+
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 0.25rem;
+
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.nav-links li {
+  flex: 0 0 auto;
+}
+
+.nav-links a {
+  display: inline-flex;
+  padding: 0.625rem 0.75rem;
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 700;
+  white-space: nowrap;
+  transition:
+    background var(--transition-medium),
+    color var(--transition-medium);
+}
+
+.nav-links a:hover {
+  background: var(--surface-hover);
+  color: var(--text);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+
+  transition:
+    border-color var(--transition-fast),
+    background var(--transition-fast);
+
+  .icon {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  &:hover {
+    border-color: var(--green);
+    background: var(--surface-hover);
+  }
+}
+
+.theme-toggle__icon--moon {
+  display: none;
+}
+
+:root[data-theme='light'] .theme-toggle__icon--sun {
+  display: none;
+}
+
+:root[data-theme='light'] .theme-toggle__icon--moon {
+  display: block;
+}
+
+.nav-cta {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.5rem;
+  min-height: 2.875rem;
+  padding: 0.75rem 1.125rem;
+  border-radius: 999px;
+  background: var(--yellow);
+  color: var(--text);
+  font-weight: 900;
+  transition: color var(--transition-fast);
+
+  .icon {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+.nav-cta:hover {
+  color: var(--text-active);
 }
 
 .burger {
@@ -165,84 +283,6 @@ body.no-scroll {
   }
 }
 
-.logo-mark {
-  display: grid;
-  width: 2.375rem;
-  height: 2.375rem;
-  place-items: center;
-  border-radius: 0.75rem;
-  background: var(--yellow);
-  box-shadow: var(--shadow-sticker);
-  color: #151000;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  transform: rotate(-5deg);
-}
-
-.nav-links {
-  @include list-reset;
-
-  display: flex;
-  flex: 1 1 auto;
-  flex-wrap: nowrap;
-  justify-content: center;
-  gap: 0.25rem;
-
-  min-width: 0;
-  overflow-x: auto;
-  scrollbar-width: none;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}
-
-.nav-links li {
-  flex: 0 0 auto;
-}
-
-.nav-links a {
-  display: inline-flex;
-  padding: 0.625rem 0.75rem;
-  border-radius: 999px;
-  color: var(--muted);
-  font-size: 0.92rem;
-  font-weight: 700;
-  white-space: nowrap;
-  transition:
-    background var(--transition-medium),
-    color var(--transition-medium);
-}
-
-.nav-links a:hover {
-  background: var(--surface-hover);
-  color: var(--text);
-}
-
-.nav-cta {
-  display: inline-flex;
-  flex: 0 0 auto;
-  align-items: center;
-  justify-content: center;
-  column-gap: 0.5rem;
-  min-height: 2.875rem;
-  padding: 0.75rem 1.125rem;
-  border-radius: 999px;
-  background: var(--yellow);
-  color: var(--text);
-  font-weight: 900;
-  transition: color var(--transition-fast);
-
-  .icon {
-    width: 1rem;
-    height: 1rem;
-  }
-}
-
-.nav-cta:hover {
-  color: var(--text-active);
-}
-
 @include mobile {
   .nav {
     gap: 0.75rem;
@@ -250,6 +290,11 @@ body.no-scroll {
 
   .nav-links {
     justify-content: flex-start;
+  }
+
+  .theme-toggle {
+    width: 2.5rem;
+    height: 2.5rem;
   }
 
   .nav-cta {
