@@ -1,0 +1,76 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+@use '../base/placeholders' as *;
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.125rem;
+}
+
+.education-card {
+  @extend %card;
+
+  padding: 1.625rem;
+  transition:
+    border-color var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.education-card:hover {
+  border-color: var(--green);
+  background: var(--surface-hover);
+}
+
+.education-card__title {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-bottom: 0.625rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+
+  .icon {
+    flex: 0 0 auto;
+    color: var(--green);
+  }
+}
+
+.education-card p {
+  color: var(--muted);
+}
+
+.education-card > span {
+  display: inline-flex;
+  margin-top: 0.625rem;
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.languages-card ul {
+  @include list-reset;
+
+  display: grid;
+  gap: 0.875rem;
+}
+
+.languages-card li {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.languages-card strong {
+  color: var(--text);
+}
+
+.languages-card span {
+  color: var(--muted);
+}
+
+@include tablet {
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+}
