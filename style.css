@@ -246,6 +246,27 @@ h3 {
     font-size: clamp(2.15rem, 13vw, 3.4rem);
   }
 }
+.reveal {
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition: opacity 800ms ease, transform 800ms ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
 .icon {
   --icon-size: 1.25rem;
   display: inline-block;
