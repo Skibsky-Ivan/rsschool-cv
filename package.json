@@ -1,0 +1,26 @@
+{
+  "name": "rsschool-cv",
+  "version": "1.0.0",
+  "description": "https://Skibsky-Ivan.github.io/rsschool-cv/cv",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass scss/style.scss style.css --watch",
+    "build": "sass scss/style.scss style.css --style=compressed",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Skibsky-Ivan/rsschool-cv.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Skibsky-Ivan/rsschool-cv/issues"
+  },
+  "homepage": "https://github.com/Skibsky-Ivan/rsschool-cv#readme",
+  "devDependencies": {
+    "sass": "^1.104.1"
+  }
+}
