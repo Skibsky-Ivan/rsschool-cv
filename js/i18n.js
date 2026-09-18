@@ -71,7 +71,8 @@ const translations = {
     'edu.title': 'Education and languages',
     'edu.bsu': 'Belarusian State University',
     'edu.bsu.fac': 'Faculty of Mechanics and Mathematics',
-    'edu.bsu.major': 'Major: Mathematics',
+    'edu.bsu.major': 'Major: Mathematics and Computer Science',
+    'edu.bsu.profile': 'Specialization: Mathematics',
     'edu.rs': 'RS School JS/FE Course',
     'edu.rs.done': 'Completed Stage 0 and Stage 0.5',
     'edu.rs.now': 'Currently taking Stage 1',
@@ -130,7 +131,8 @@ const translations = {
 
     'projects.kicker': '03 / Портфолио',
     'projects.title': 'Проекты',
-    'projects.desc': 'Избранные проекты с живыми демо и исходным кодом на GitHub.',
+    'projects.desc':
+      'Избранные проекты с живыми демо и исходным кодом на GitHub.',
     'projects.live': 'Живое демо',
     'projects.code': 'Код',
     'projects.nfc.text':
@@ -152,13 +154,15 @@ const translations = {
 
     'code.kicker': '04 / Код',
     'code.title': 'Пример кода',
-    'code.desc': 'Задача «подъём по лестнице», решённая динамическим программированием.',
+    'code.desc':
+      'Задача «подъём по лестнице», решённая динамическим программированием.',
 
     'edu.kicker': '05 / Бэкграунд',
     'edu.title': 'Образование и языки',
     'edu.bsu': 'Белорусский государственный университет',
     'edu.bsu.fac': 'Механико-математический факультет',
-    'edu.bsu.major': 'Специальность: математика',
+    'edu.bsu.major': 'Специальность: математика и компьютерные науки',
+    'edu.bsu.profile': 'Профилизация: математика',
     'edu.rs': 'Курс RS School JS/FE',
     'edu.rs.done': 'Завершил Stage 0 и Stage 0.5',
     'edu.rs.now': 'Сейчас прохожу Stage 1',
