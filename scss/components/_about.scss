@@ -1,0 +1,77 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+@use '../base/placeholders' as *;
+
+.about-cards {
+  display: grid;
+  gap: 1rem;
+}
+
+.about-cards--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mini-card {
+  @extend %card;
+
+  overflow: hidden;
+  padding: 1.5rem;
+  border-top: 7px solid var(--accent, var(--green));
+  transition: border-color var(--transition-medium);
+}
+
+.mini-card:hover {
+  border-color: var(--accent, var(--green));
+}
+
+.mini-card__heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mini-card__heading h3 {
+  margin-bottom: 0;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+.mini-card__icon {
+  @include flex-center;
+
+  flex: 0 0 auto;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.75rem;
+  background: var(--accent, var(--green));
+  box-shadow: var(--shadow-sticker);
+  color: var(--ink-on-accent);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.mini-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.accent-green {
+  --accent: var(--green);
+}
+
+.accent-blue {
+  --accent: var(--blue);
+}
+
+.accent-yellow {
+  --accent: var(--yellow);
+}
+
+@include tablet {
+  .about-cards--three {
+    grid-template-columns: 1fr;
+  }
+}
