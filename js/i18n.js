@@ -56,12 +56,15 @@ const translations = {
       'Adaptive shop interface with slider, countdown timer, category filtering, modal windows, scroll-to-top button and mobile menu.',
     'projects.widgets.text':
       'Interactive widgets built with Vanilla JavaScript: virtual piano, theme toggle, photo filters, image upload, Canvas processing and export.',
+    'projects.htmlbuilder.text':
+      'CLI Node.js build tool for static site assembly: HTML component substitution, CSS bundling, and recursive asset copying using asynchronous file streams.',
     'projects.alt.nfc': 'Not-Fight-Club project screenshot',
     'projects.alt.podcast': 'Podcast Player project screenshot',
     'projects.alt.shelter': 'Shelter project screenshot',
     'projects.alt.christmas': 'Christmas Shop project screenshot',
     'projects.alt.drumkit': 'JS30 Widgets Drum-Kit project screenshot',
     'projects.alt.photofilter': 'JS30 Widgets Photofilter project screenshot',
+    'projects.alt.htmlbuilder': 'HTML Builder project screenshot',
 
     'code.kicker': '04 / Code',
     'code.title': 'Code example',
@@ -145,12 +148,15 @@ const translations = {
       'Адаптивный интерфейс магазина со слайдером, таймером обратного отсчёта, фильтрацией по категориям, модальными окнами, кнопкой «наверх» и мобильным меню.',
     'projects.widgets.text':
       'Интерактивные виджеты на чистом JavaScript: виртуальное пианино, переключение темы, фото-фильтры, загрузка изображений, обработка в Canvas и экспорт.',
+    'projects.htmlbuilder.text':
+      'CLI-инструмент на Node.js для сборки статических сайтов: подстановка HTML-компонентов, бандлинг CSS и рекурсивное копирование ресурсов через асинхронные файловые потоки.',
     'projects.alt.nfc': 'Скриншот проекта Not-Fight-Club',
     'projects.alt.podcast': 'Скриншот проекта Podcast Player',
     'projects.alt.shelter': 'Скриншот проекта Shelter',
     'projects.alt.christmas': 'Скриншот проекта Christmas Shop',
     'projects.alt.drumkit': 'Скриншот проекта JS30 Widgets: Drum-Kit',
     'projects.alt.photofilter': 'Скриншот проекта JS30 Widgets: Photofilter',
+    'projects.alt.htmlbuilder': 'Скриншот проекта HTML Builder',
 
     'code.kicker': '04 / Код',
     'code.title': 'Пример кода',
